@@ -4,7 +4,7 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 from utils.please import analyze_image  # Importing from please.py
-from utils.geoloc import get_exif_data, get_gps_info  # Import GPS extraction functions
+from utils.image_location_extractor import get_exif_data, get_gps_info  # Import GPS extraction functions
 from pymongo import MongoClient, GEOSPHERE
 
 # Load environment variables
