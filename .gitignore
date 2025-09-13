@@ -61,3 +61,29 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Static files
+static/uploads/
+static/generated/
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Local development
+.env
+.env.local
+*.sqlite
+
+# IDE
+.idea/
+*.iml
+*.iws
+.idea_modules/
