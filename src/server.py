@@ -20,7 +20,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # Connect to MongoDB
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://mongo:KbeZEYrdTLEwTxdXYjIxlGoadDoiJyMt@maglev.proxy.rlwy.net:25823")
+MONGO_URI = os.getenv("MONGODB_URI")
+if not MONGO_URI:
+    raise ValueError("❌ ERROR: MONGODB_URI is not set in .env file")
 client = MongoClient(MONGO_URI)
 db = client["parking_signs_db"]
 collection = db["scanned_signs"]
